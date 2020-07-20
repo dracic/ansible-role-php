@@ -54,6 +54,10 @@
       line: "user = {{ php_fpm_pool_user }}"
     - regexp: "^group.?=.+$"
       line: "group = {{ php_fpm_pool_group }}"
+    - regexp: "^listen.owner.?=.+$"
+      line: "listen.owner = {{ php_fpm_pool_user }}"
+    - regexp: "^listen.group.?=.+$"
+      line: "listen.group = {{ php_fpm_pool_group }}"
     - regexp: "^listen.?=.+$"
       line: "listen = {{ php_fpm_listen }}"
     - regexp: '^listen\.allowed_clients.?=.+$'
